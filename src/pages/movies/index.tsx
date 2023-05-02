@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -87,7 +87,7 @@ const Movies: React.FC<MoviesProps> = ({ initialData }) => {
 
 export default Movies;
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   try {
     const initialData = await MovieService.getMovies({});
     return {
