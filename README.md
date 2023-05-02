@@ -5,7 +5,7 @@
 ## 🧐 Sobre
 
 <h4 align="center"> 
-	mid frontend audition, é um teste para colocação profissional, onde foi desenvolvida uma aplicação front-end que consome a SWAPI (uma api independente e livre, com recursos da saga STAR WARS), o projeto foi desenvolvido com NEXTJS
+Foi desenvolvida uma aplicação front-end que consome a SWAPI (uma api independente e livre, com recursos da saga STAR WARS), o projeto foi desenvolvido com NEXTJS
 </h4>
 
 ## ⚒ Instalando <a name = "installing"></a>
