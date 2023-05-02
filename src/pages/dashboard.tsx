@@ -9,7 +9,7 @@ import { SwApiResponse } from 'data/models/swapi-response.model';
 import { CharacterService } from 'data/services/character.service';
 import { MovieService } from 'data/services/movie.service';
 import { useDashboardChartsFormat } from 'hooks/dashboard-charts-format.hook';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -112,7 +112,7 @@ const Dashboard: React.FC<DashboardProps> = ({ movies, characters }) => {
 
 export default Dashboard;
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   try {
     const movies = await MovieService.getMovies({});
     const characters = await CharacterService.getCharacters({});
