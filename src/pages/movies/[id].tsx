@@ -57,7 +57,11 @@ export default MovieDetail;
 
 export async function getStaticPaths() {
   return {
-    paths: [],
+    paths: [
+      { params: { index: '1' } },
+      { params: { index: '2' } },
+      { params: { index: '3' } }
+    ],
     fallback: true
   };
 }
