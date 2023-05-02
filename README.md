@@ -12,9 +12,9 @@ Foi desenvolvida uma aplicação front-end que consome a SWAPI (uma api independ
 
 ```bash
 # Clone o projeto
-$ git clone https://github.com/Willian-Rodrigues/mid-frontend-audition
+$ git clone https://github.com/Willian-Rodrigues/starwars
 # Acesse
-$ cd ./mid-frontend-audition
+$ cd ./starwars
 # Instale as dependencias
 $ yarn or npm install
 # Inicie o projeto
