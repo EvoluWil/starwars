@@ -9,7 +9,7 @@ import { SwApiResponse } from 'data/models/swapi-response.model';
 import { CharacterService } from 'data/services/character.service';
 import { MovieService } from 'data/services/movie.service';
 import { useDashboardChartsFormat } from 'hooks/dashboard-charts-format.hook';
-import { GetServerSideProps, GetStaticProps } from 'next';
+import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';

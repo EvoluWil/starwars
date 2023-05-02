@@ -54,7 +54,7 @@ export default PODetail;
 
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { index: '0' } }, { params: { index: '1' } }],
+    paths: [{ params: { index: '0' } }],
     fallback: false
   };
 }
