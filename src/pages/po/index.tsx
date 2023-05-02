@@ -31,13 +31,6 @@ const PO: React.FC = () => {
 
 export default PO;
 
-export async function getStaticPaths() {
-  return {
-    paths: [{ params: { index: '0' } }, { params: { index: '1' } }],
-    fallback: false
-  };
-}
-
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {

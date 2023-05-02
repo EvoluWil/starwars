@@ -52,6 +52,13 @@ const PODetail = () => {
 
 export default PODetail;
 
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { index: '0' } }, { params: { index: '1' } }],
+    fallback: false
+  };
+}
+
 export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
   try {
     if (!params?.index) {
