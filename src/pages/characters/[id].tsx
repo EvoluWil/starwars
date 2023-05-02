@@ -37,6 +37,12 @@ const CharacterDetail: React.FC<CharacterDetailProps> = ({ initialData }) => {
 
 export default CharacterDetail;
 
+export async function getStaticPaths() {
+  return {
+    fallback: true
+  };
+}
+
 export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
   try {
     if (!params?.id) {
