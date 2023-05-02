@@ -12,7 +12,7 @@ import { IconButton } from 'components/interactions/icon-button/icon-button.comp
 import { ROMAN } from 'data/constants/roman.constant';
 import { momentoPo } from 'data/constants/momento-po.constant';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { GetServerSideProps, GetStaticProps } from 'next';
+import { GetStaticProps } from 'next';
 
 const PODetail = () => {
   const [started, setStarted] = useState(false);
@@ -52,10 +52,7 @@ const PODetail = () => {
 
 export default PODetail;
 
-export const getServerSideProps: GetServerSideProps = async ({
-  locale,
-  params
-}) => {
+export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
   try {
     if (!params?.index) {
       throw new Error('Param is required');

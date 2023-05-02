@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import { useTranslation } from 'react-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -94,7 +94,7 @@ const Characters: React.FC<CharactersProps> = ({ initialData }) => {
 
 export default Characters;
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   try {
     const initialData = await CharacterService.getCharacters({});
     return {
