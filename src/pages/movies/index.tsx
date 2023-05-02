@@ -92,7 +92,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
     const initialData = await MovieService.getMovies({});
     return {
       props: {
-        ...(await serverSideTranslations(locale ?? 'en', ['movies', 'common'])),
+        ...(await serverSideTranslations(locale || 'en', ['movies', 'common'])),
         pageTitle: 'moviesTitle',
         initialData
       }
