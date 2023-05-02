@@ -55,6 +55,13 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ initialData }) => {
 
 export default MovieDetail;
 
+export async function getStaticPaths() {
+  return {
+    paths: [],
+    fallback: true
+  };
+}
+
 export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
   try {
     if (!params?.id) {

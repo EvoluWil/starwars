@@ -94,12 +94,6 @@ const Characters: React.FC<CharactersProps> = ({ initialData }) => {
 
 export default Characters;
 
-export async function getStaticPaths() {
-  return {
-    fallback: true
-  };
-}
-
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   try {
     const initialData = await CharacterService.getCharacters({});

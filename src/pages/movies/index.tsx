@@ -87,12 +87,6 @@ const Movies: React.FC<MoviesProps> = ({ initialData }) => {
 
 export default Movies;
 
-export async function getStaticPaths() {
-  return {
-    fallback: true
-  };
-}
-
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   try {
     const initialData = await MovieService.getMovies({});
