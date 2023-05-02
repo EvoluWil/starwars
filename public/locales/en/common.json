@@ -1,0 +1,27 @@
+{
+  "locale": "en-US",
+  "footer": {
+    "follow": "Follow Me",
+    "developer": "Developed by",
+    "data": "Data provided by SWAPI ©2022"
+  },
+  "nav": {
+    "home": "Home",
+    "films": "Movies",
+    "people": "Characters",
+    "dashboard": "Dashboard",
+    "po": "PO Moment"
+  },
+  "pageTitle": {
+    "homeTitle": "Home",
+    "charactersTitle": "Characters",
+    "moviesTitle": "Movies",
+    "dashboardTitle": "Dashboard",
+    "notFoundTitle": "Not Found",
+    "POMoment": "PO Moment"
+  },
+  "errors": {
+    "defaultMessage": "Oops! Something went wrong loading the data, please try again later!"
+  },
+  "playButton": "Start Presentation"
+}
