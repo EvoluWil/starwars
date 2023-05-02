@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -55,18 +55,10 @@ const MovieDetail: React.FC<MovieDetailProps> = ({ initialData }) => {
 
 export default MovieDetail;
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      { params: { index: '1' } },
-      { params: { index: '2' } },
-      { params: { index: '3' } }
-    ],
-    fallback: true
-  };
-}
-
-export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
+export const getServerSideProps: GetServerSideProps = async ({
+  locale,
+  params
+}) => {
   try {
     if (!params?.id) {
       throw new Error('Param is required');
